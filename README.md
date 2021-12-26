@@ -1,5 +1,5 @@
 # presenteapp
-Aplicación Spring para que alumnos puedan constatar su presencia a clases virtuales.
+Aplicación Spring para que alumnos puedan constatar su presencia en clases virtuales.
 
 Vista del alumno:
 ![Vista del alumno](https://i.imgur.com/S7MGaJM.png)
