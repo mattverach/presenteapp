@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>PresenteApp</title>
+
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" th:href="@{https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css}" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" th:href="@{/css/style.css}">
+ 
+</head>
+
+<body>
+
+<!-- Page Content -->
+<div class="container">
+
+
+
+  <h2>Editar Asistencia</h2>
+  <form class="form-horizontal" th:action="@{/administrador/update}" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="dni">DNI</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="dni" name="dni"
+        placeholder="Ingrese el DNI del alumno" autocomplete="off" th:value="${asistencia.dni}" required>
+      </div>
+    </div>
+    <form class="form-horizontal" action="#" method="post" enctype="multipart/form-data">
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="nombre">Nombre</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="nombre" name="nombre"
+          placeholder="Ingrese el nombre del alumno" autocomplete="off" th:value="${asistencia.nombre}">
+        </div>
+      </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="comision">Comisión</label>
+      <div class="col-sm-10">
+        <input type="number" class="form-control" id="comision" th:value="${asistencia.comision}"
+        name="comision" placeholder="Ingrese la comisión del alumno"
+        required autocomplete="off">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="fecha">Fecha </label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" step="any" id="fecha" placeholder="dd/mm/aaaa" th:value="${asistencia.fecha}" name="fecha" autocomplete="off" required>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-2">
+        <button type="submit" class="btn btn-success">
+          <span class="glyphicon glyphicon-saved"></span> Guardar
+        </button>
+      </div>
+    </div>
+
+  </form>
+
+</div>
+<!-- /.container -->
+
+
+<!-- Bootstrap core JavaScript -->
+<script th:src="@{https://code.jquery.com/jquery-3.4.1.slim.min.js}" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script th:src="@{https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js}" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script th:src="@{https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js}" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+  
+  </html>

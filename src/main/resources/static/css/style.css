@@ -1,0 +1,19 @@
+body{
+    background-color: #212529;
+    color: aliceblue;
+    padding: 20px;
+}
+
+.divbtnsalir {
+    display: flex;
+    align-items: flex-end;
+    justify-content:end;
+    max-width: fit-content;
+}
+
+a{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
